@@ -65,13 +65,13 @@ function Topic(props) {
   const { classes } = props;
   const [q, setTopic] = useState('deepfake');
   const [apiKey, setApiKey] = useState('');
-  const [language, setLanguage] = useState('en');
+  const [language, setLanguage] = useState('all');
   const [results, setResults] = useState([]);
   const pageSize = 100;
 
   const languages = [
     {
-      value: null,
+      value: 'all',
       label: 'All',
     },
     {
@@ -121,7 +121,7 @@ function Topic(props) {
     let params = {
       q:q,
       apiKey:apiKey,
-      language:language,
+      language:language === "all" ? null : language,
       pageSize:pageSize,
       page:page,
     }
