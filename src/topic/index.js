@@ -12,6 +12,7 @@ import TextField from '@material-ui/core/TextField';
 
 import ReactVirtualizedTable from '../table/';
 
+import { Histogram, DensitySeries, BarSeries, withParentSize, XAxis, YAxis } from '@data-ui/histogram';
 
 const options = { 
   fieldSeparator: ';',
@@ -161,6 +162,7 @@ function Topic(props) {
     setResults([...datas])
   }
   let results_display = results.length ? <ReactVirtualizedTable data={results} /> : null
+  let histogram_display = results.length ? <ReactVirtualizedTable data={results} /> : null
   return (
     <div className={classes.centered}>
       <TextField
