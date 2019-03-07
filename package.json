@@ -2,6 +2,7 @@
   "name": "newsapi",
   "version": "0.1.0",
   "private": true,
+  "homepage":"https://chrisdavisgithub.github.io/newsapi/",
   "dependencies": {
     "@data-ui/histogram": "^0.0.76",
     "@material-ui/core": "^3.9.2",
